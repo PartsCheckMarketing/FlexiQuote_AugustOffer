@@ -141,7 +141,6 @@
 
       <div class="hp"><label>Leave empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
       <input type="hidden" name="campaign" value="FlexiQuote 6 Months Free - Aug 2026">
-      <input type="hidden" id="state" name="state" value="">
       <input type="hidden" id="source" name="source" value="">
 
       <button type="submit" class="btn" id="btn">Register My Interest</button>
@@ -184,12 +183,10 @@
   }
 
   var shop=tidy(qp("b")||qp("business")||qp("shop")),
-      email=(qp("e")||qp("email")).toLowerCase(),
-      state=(qp("s")||qp("state")).toUpperCase();
+      email=(qp("e")||qp("email")).toLowerCase();
 
   document.getElementById("shop").value=shop;
   document.getElementById("email").value=email;
-  document.getElementById("state").value=state;
   document.getElementById("source").value=window.location.search||"(no params)";
   if(shop) document.getElementById("eyebrow").textContent="Exclusive offer for "+shop;
 
